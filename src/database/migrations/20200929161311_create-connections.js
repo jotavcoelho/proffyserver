@@ -17,5 +17,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('class_schedule');
+  return knex.schema.dropTable('connections');
 };
