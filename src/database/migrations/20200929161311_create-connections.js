@@ -11,7 +11,7 @@ exports.up = function(knex) {
       .onDelete('CASCADE');
 
     table.timestamp('created_at')
-      .defaultTo('now()')
+      .defaultTo(knex.raw('CURRENT_TIMESTAMP'))
       .notNullable();
   });
 };
